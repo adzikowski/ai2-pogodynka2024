@@ -24,6 +24,7 @@ class WeatherController extends AbstractController
     public function cityCountry(Location $location, ForecastRepository $repository, string $country): Response
     {
         $forecasts = $repository->findByLocationAndCountry($location, $country);
+        dump($forecasts);
         return $this->render('weather/city.html.twig', [
             'location' => $location,
             'forecasts' => $forecasts,
