@@ -562,3 +562,7 @@ c3b4a9,::1,GET,http://pogodynka.localhost:50965/forecast,1729638144,,200,request
 18bf6c,::1,GET,http://pogodynka.localhost:50965/forecast/7/edit,1729638164,,200,request
 ce26dd,::1,POST,http://pogodynka.localhost:50965/forecast/7,1729638181,,303,request
 10d94d,::1,GET,http://pogodynka.localhost:50965/forecast,1729638181,,200,request
+a6f4c6,::1,GET,http://pogodynka.localhost:50965/,1729640270,,404,request
+d08a6b,::1,GET,http://pogodynka.localhost:50965/forecast,1729640286,,200,request
+ba7bb4,::1,GET,http://pogodynka.localhost:50965/forecast/4/edit,1729640291,,200,request
+a37255,::1,POST,http://pogodynka.localhost:50965/forecast/4/edit,1729640310,,422,request

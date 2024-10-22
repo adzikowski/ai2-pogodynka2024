@@ -13,7 +13,7 @@ App\Entity\Forecast:
 
     temperatureC:
       - NotBlank:
-          message: "Please choose a city"
+          message: "Temperature should not be blank"
           groups: [ 'create', 'edit' ]
       - Regex:
           pattern: '/^(0|[1-9][0-9]*)$/'
@@ -28,7 +28,7 @@ App\Entity\Forecast:
 
     description:
       - NotBlank:
-          message: "Please choose a city"
+          message: "Description should not be blank"
           groups: [ 'create', 'edit' ]
       - Regex:
           pattern: '/^[A-zÀ-ž]+(?: [A-zÀ-ž]+)*$/'
@@ -38,5 +38,5 @@ App\Entity\Forecast:
 
     location:
       - NotBlank:
-          message: "Please choose a city"
+          message: "Please choose a location"
           groups: [ 'create', 'edit' ]
