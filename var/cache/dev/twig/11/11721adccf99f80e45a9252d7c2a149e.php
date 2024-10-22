@@ -182,7 +182,7 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
                         <li class=\"nav-item\">
                             <a class=\"nav-link\" href=";
         // line 40
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forecast_index");
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_location_index");
         yield ">Weather</a>
                         </li>
                         <li class=\"nav-item\">
@@ -337,7 +337,7 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
                 <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
                     <ul class=\"navbar-nav\">
                         <li class=\"nav-item\">
-                            <a class=\"nav-link\" href={{path('app_forecast_index')}}>Weather</a>
+                            <a class=\"nav-link\" href={{path('app_location_index')}}>Weather</a>
                         </li>
                         <li class=\"nav-item\">
                             <a class=\"nav-link\" href={{path('app_forecast_index')}}>Measurements</a>
