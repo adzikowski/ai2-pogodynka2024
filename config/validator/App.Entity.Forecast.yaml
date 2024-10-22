@@ -1,0 +1,42 @@
+App\Entity\Forecast:
+  properties:
+    timeOfOccurrence:
+      - NotBlank:
+          message: "Date should not be blank"
+          groups: [ 'create', 'edit' ]
+      - Date:
+          message: 'Enter valid format yyyy-MM-dd'
+      - Range:
+          min: '1900-01-01'
+          max: '2100-12-31'
+          notInRangeMessage: Date should be between {{ min }} and {{ max }}
+
+    temperatureC:
+      - NotBlank:
+          message: "Please choose a city"
+          groups: [ 'create', 'edit' ]
+      - Regex:
+          pattern: '/^(0|[1-9][0-9]*)$/'
+          match: true
+          message: "Not a number"
+          groups: [ 'create', 'edit' ]
+      - Range:
+          min: -65
+          max: 65
+          notInRangeMessage: Temperature must be between {{ min }} and {{ max }}
+          groups: [ 'create', 'edit' ]
+
+    description:
+      - NotBlank:
+          message: "Please choose a city"
+          groups: [ 'create', 'edit' ]
+      - Regex:
+          pattern: '/^[A-zÀ-ž]+(?: [A-zÀ-ž]+)*$/'
+          match: true
+          message: "Description contains invalid text"
+          groups: [ 'create', 'edit' ]
+
+    location:
+      - NotBlank:
+          message: "Please choose a city"
+          groups: [ 'create', 'edit' ]

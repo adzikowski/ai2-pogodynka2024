@@ -1,0 +1,50 @@
+App\Entity\Location:
+  properties:
+    city:
+      - NotBlank:
+          message: "Please enter a city"
+          groups: [ 'create', 'edit' ]
+      - Regex:
+          pattern: '/^[A-zÀ-ž]+(?: [A-zÀ-ž]+)*$/'
+          match: true
+          message: "Not a valid text"
+          groups: ['create', 'edit']
+
+    country:
+      - NotBlank:
+          message: "Please choose a country"
+          groups: [ 'create', 'edit' ]
+      - Regex:
+          pattern: '/^[A-zÀ-ž]+(?: [A-zÀ-ž]+)*$/'
+          match: true
+          message: "Not a valid text"
+          groups: ['create', 'edit']
+
+    latitude:
+      - NotBlank:
+          message: "Please enter latitude"
+          groups: [ 'create', 'edit' ]
+      - Regex:
+          pattern: '/^(-?(0|[1-9][0-9]*)(\.[0-9]+)?)$/'
+          match: true
+          message: "Not a number"
+          groups: ['create', 'edit']
+      - Range:
+          min: -90
+          max: 90
+          notInRangeMessage: Latitude must be between {{ min }} and {{ max }}
+          groups: ['create', 'edit']
+
+    longitude:
+      - NotBlank:
+          message: "Please enter longitude"
+      - Regex:
+          pattern: '/^(-?(0|[1-9][0-9]*)(\.[0-9]+)?)$/'
+          match: true
+          message: "Not a number"
+          groups: ['create', 'edit']
+      - Range:
+          min: -180
+          max: 180
+          notInRangeMessage: Longitude must be between {{ min }} and {{ max }}
+          groups: ['create', 'edit']
