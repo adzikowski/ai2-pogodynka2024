@@ -676,6 +676,6 @@ class __TwigTemplate_b17cccac482f17bc3e9d6c469dbc7fb5 extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/notifier.html.twig", "C:\\Users\\Adi\\PhpstormProjects\\AI2-lab\\ai2-pogodynka2024\\pogodynka\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\notifier.html.twig");
+", "@WebProfiler/Collector/notifier.html.twig", "C:\\Users\\Adi\\PhpstormProjects\\AI2-lab\\ai2-pogodynka2024\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\notifier.html.twig");
     }
 }

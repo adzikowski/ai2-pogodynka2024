@@ -1004,6 +1004,6 @@ class __TwigTemplate_200f9b9c671c0e93381b9a5d614d769e extends Template
         {% endautoescape %}</script>
     </div>
 {% endmacro %}
-", "@WebProfiler/Collector/time.html.twig", "C:\\Users\\Adi\\PhpstormProjects\\AI2-lab\\ai2-pogodynka2024\\pogodynka\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\time.html.twig");
+", "@WebProfiler/Collector/time.html.twig", "C:\\Users\\Adi\\PhpstormProjects\\AI2-lab\\ai2-pogodynka2024\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\time.html.twig");
     }
 }

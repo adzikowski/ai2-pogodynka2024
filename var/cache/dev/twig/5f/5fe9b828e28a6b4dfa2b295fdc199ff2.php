@@ -589,6 +589,6 @@ class __TwigTemplate_4e5debac64df04a5a1660fff6afa50ae extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/validator.html.twig", "C:\\Users\\Adi\\PhpstormProjects\\AI2-lab\\ai2-pogodynka2024\\pogodynka\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\validator.html.twig");
+", "@WebProfiler/Collector/validator.html.twig", "C:\\Users\\Adi\\PhpstormProjects\\AI2-lab\\ai2-pogodynka2024\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\validator.html.twig");
     }
 }

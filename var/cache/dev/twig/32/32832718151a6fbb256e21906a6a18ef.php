@@ -31,7 +31,6 @@ class __TwigTemplate_ff31db6b8b1027456d4c9eb97c477966 extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
-            'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -61,7 +60,7 @@ class __TwigTemplate_ff31db6b8b1027456d4c9eb97c477966 extends Template
 
     }
 
-    // line 3
+    // line 2
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -84,33 +83,7 @@ class __TwigTemplate_ff31db6b8b1027456d4c9eb97c477966 extends Template
         yield from [];
     }
 
-    // line 4
-    /**
-     * @return iterable<null|scalar|\Stringable>
-     */
-    public function block_stylesheets(array $context, array $blocks = []): iterable
-    {
-        $macros = $this->macros;
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 5
-        yield "
-
-";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-        
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
-
-        yield from [];
-    }
-
-    // line 8
+    // line 3
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -123,65 +96,70 @@ class __TwigTemplate_ff31db6b8b1027456d4c9eb97c477966 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 9
+        // line 4
         yield "    <h1>Location index</h1>
-
     <table class=\"table\">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>City</th>
-                <th>Country</th>
-                <th>Latitude</th>
-                <th>Longitude</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>actions</th>
+        </tr>
         </thead>
         <tbody>
         ";
-        // line 23
+        // line 17
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["locations"]) || array_key_exists("locations", $context) ? $context["locations"] : (function () { throw new RuntimeError('Variable "locations" does not exist.', 23, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["locations"]) || array_key_exists("locations", $context) ? $context["locations"] : (function () { throw new RuntimeError('Variable "locations" does not exist.', 17, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["location"]) {
-            // line 24
+            // line 18
             yield "            <tr>
                 <td>";
-            // line 25
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "id", [], "any", false, false, false, 25), "html", null, true);
+            // line 19
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "id", [], "any", false, false, false, 19), "html", null, true);
             yield "</td>
                 <td>";
-            // line 26
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "city", [], "any", false, false, false, 26), "html", null, true);
+            // line 20
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "city", [], "any", false, false, false, 20), "html", null, true);
             yield "</td>
                 <td>";
-            // line 27
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "country", [], "any", false, false, false, 27), "html", null, true);
+            // line 21
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "country", [], "any", false, false, false, 21), "html", null, true);
             yield "</td>
                 <td>";
-            // line 28
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "latitude", [], "any", false, false, false, 28), "html", null, true);
+            // line 22
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "latitude", [], "any", false, false, false, 22), "html", null, true);
             yield "</td>
                 <td>";
-            // line 29
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "longitude", [], "any", false, false, false, 29), "html", null, true);
+            // line 23
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["location"], "longitude", [], "any", false, false, false, 23), "html", null, true);
             yield "</td>
                 <td>
                     <a href=\"";
-            // line 31
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_location_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["location"], "id", [], "any", false, false, false, 31)]), "html", null, true);
+            // line 25
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_location_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["location"], "id", [], "any", false, false, false, 25)]), "html", null, true);
             yield "\">show</a>
-                    <a href=\"";
-            // line 32
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_location_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["location"], "id", [], "any", false, false, false, 32)]), "html", null, true);
-            yield "\">edit</a>
-                </td>
+                    ";
+            // line 26
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_LOCATION_EDIT")) {
+                // line 27
+                yield "                        <a href=\"";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_location_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["location"], "id", [], "any", false, false, false, 27)]), "html", null, true);
+                yield "\">edit</a>
+                    ";
+            }
+            // line 29
+            yield "                </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 36
+            // line 32
             yield "            <tr>
                 <td colspan=\"6\">no records found</td>
             </tr>
@@ -190,15 +168,18 @@ class __TwigTemplate_ff31db6b8b1027456d4c9eb97c477966 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['location'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 36
         yield "        </tbody>
     </table>
-
-    <a href=\"";
-        // line 43
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_location_new");
-        yield "\">Create new</a>
-";
+    ";
+        // line 38
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_LOCATION_NEW")) {
+            // line 39
+            yield "        <a href=\"";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_location_new");
+            yield "\">Create new</a>
+    ";
+        }
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -229,31 +210,25 @@ class __TwigTemplate_ff31db6b8b1027456d4c9eb97c477966 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  199 => 43,  194 => 40,  185 => 36,  176 => 32,  172 => 31,  167 => 29,  163 => 28,  159 => 27,  155 => 26,  151 => 25,  148 => 24,  143 => 23,  127 => 9,  114 => 8,  101 => 5,  88 => 4,  65 => 3,  42 => 1,);
+        return array (  178 => 39,  176 => 38,  172 => 36,  163 => 32,  156 => 29,  150 => 27,  148 => 26,  144 => 25,  139 => 23,  135 => 22,  131 => 21,  127 => 20,  123 => 19,  120 => 18,  115 => 17,  100 => 4,  87 => 3,  64 => 2,  41 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{% extends 'base.html.twig' %}
-
 {% block title %}Location index{% endblock %}
-{% block stylesheets %}
-
-
-{% endblock %}
 {% block body %}
     <h1>Location index</h1>
-
     <table class=\"table\">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>City</th>
-                <th>Country</th>
-                <th>Latitude</th>
-                <th>Longitude</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for location in locations %}
@@ -265,7 +240,9 @@ class __TwigTemplate_ff31db6b8b1027456d4c9eb97c477966 extends Template
                 <td>{{ location.longitude }}</td>
                 <td>
                     <a href=\"{{ path('app_location_show', {'id': location.id}) }}\">show</a>
-                    <a href=\"{{ path('app_location_edit', {'id': location.id}) }}\">edit</a>
+                    {% if is_granted('ROLE_LOCATION_EDIT') %}
+                        <a href=\"{{ path('app_location_edit', {'id': location.id}) }}\">edit</a>
+                    {% endif %}
                 </td>
             </tr>
         {% else %}
@@ -275,8 +252,9 @@ class __TwigTemplate_ff31db6b8b1027456d4c9eb97c477966 extends Template
         {% endfor %}
         </tbody>
     </table>
-
-    <a href=\"{{ path('app_location_new') }}\">Create new</a>
+    {% if is_granted('ROLE_LOCATION_NEW') %}
+        <a href=\"{{ path('app_location_new') }}\">Create new</a>
+    {% endif %}
 {% endblock %}
 ", "location/index.html.twig", "C:\\Users\\Adi\\PhpstormProjects\\AI2-lab\\ai2-pogodynka2024\\templates\\location\\index.html.twig");
     }

@@ -53,33 +53,35 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
         // line 1
         yield "<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>";
+<head>
+    <meta charset=\"UTF-8\">
+    <title>";
         // line 5
         yield from $this->unwrap()->yieldBlock('title', $context, $blocks);
         yield "</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">
-        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">
-        ";
+    <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">
+    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">
+    ";
         // line 8
         yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
         // line 29
-        yield "    </head>
-    ";
+        yield "</head>
+";
         // line 30
         yield from $this->unwrap()->yieldBlock('container', $context, $blocks);
-        // line 50
-        yield "    <div class=\"container-fluid mx-auto\" style=\"width: 100vw;\">
-        ";
-        // line 51
-        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 53
-        yield "    </div>
+        // line 57
+        yield "<body>
+<div class=\"container-fluid mx-auto\" style=\"width: 100vw;\">
     ";
-        // line 54
+        // line 59
+        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
+        // line 61
+        yield "</div>
+</body>
+";
+        // line 63
         yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
-        // line 58
+        // line 67
         yield "</html>
 ";
         
@@ -128,26 +130,26 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 9
-        yield "            <style>
-                body {
-                    background: url(\"https://placehold.co/100x100/FFFFFF/EFEFEF/png?text=50965\");
-                }
+        yield "        <style>
+            body {
+                background: url(\"https://placehold.co/100x100/FFFFFF/EFEFEF/png?text=50965\");
+            }
 
-                label {
-                    display: block;
-                }
+            label {
+                display: block;
+            }
 
-                input,select {
-                    width: 100%;
-                    height: 35px;
-                    border-style: solid;
-                    border-color: #b1b1b1;
-                    border-width: 2px;
-                    border-radius: 6px;
-                }
-            </style>
+            input,select {
+                width: 100%;
+                height: 35px;
+                border-style: solid;
+                border-color: #b1b1b1;
+                border-width: 2px;
+                border-radius: 6px;
+            }
+        </style>
 
-        ";
+    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -171,31 +173,49 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "container"));
 
         // line 31
-        yield "        <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
-            <div class=\"container-fluid\" >
-                <a class=\"navbar-brand\" href=\"#\">W App</a>
-                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                    <span class=\"navbar-toggler-icon\"></span>
-                </button>
-                <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
-                    <ul class=\"navbar-nav\">
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=";
+        yield "    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        <div class=\"container-fluid\" >
+            <a class=\"navbar-brand\" href=\"#\">W App</a>
+            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+            </button>
+            <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                <ul class=\"navbar-nav\">
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=";
         // line 40
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_location_index");
         yield ">Weather</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=";
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=";
         // line 43
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forecast_index");
         yield ">Measurements</a>
-                        </li>
-                    </ul>
-                </div>
+                    </li>
+                    <li class=\"nav-item\">
+                        ";
+        // line 46
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
+            // line 47
+            yield "                            <a class=\"nav-link\" href=";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            yield ">Logout</a>
+                        ";
+        } else {
+            // line 49
+            yield "                            <a class=\"nav-link\" href=";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            yield ">Login</a>
+                        ";
+        }
+        // line 51
+        yield "                    </li>
+                </ul>
             </div>
-        </nav>
-    ";
+        </div>
+    </nav>
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -205,7 +225,7 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
         yield from [];
     }
 
-    // line 51
+    // line 59
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -218,8 +238,8 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 52
-        yield "        ";
+        // line 60
+        yield "    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -229,7 +249,7 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
         yield from [];
     }
 
-    // line 54
+    // line 63
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -242,12 +262,12 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 55
-        yield "        ";
+        // line 64
+        yield "    ";
         yield from $this->unwrap()->yieldBlock('importmap', $context, $blocks);
-        // line 56
-        yield "        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz\" crossorigin=\"anonymous\"></script>
-    ";
+        // line 65
+        yield "    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz\" crossorigin=\"anonymous\"></script>
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -257,7 +277,7 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
         yield from [];
     }
 
-    // line 55
+    // line 64
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -293,68 +313,77 @@ class __TwigTemplate_bd39f73ebafab274e9c0b4a7650cfc1f extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  261 => 55,  249 => 56,  246 => 55,  233 => 54,  222 => 52,  209 => 51,  191 => 43,  185 => 40,  174 => 31,  161 => 30,  131 => 9,  118 => 8,  95 => 5,  83 => 58,  81 => 54,  78 => 53,  76 => 51,  73 => 50,  71 => 30,  68 => 29,  66 => 8,  60 => 5,  54 => 1,);
+        return array (  281 => 64,  269 => 65,  266 => 64,  253 => 63,  242 => 60,  229 => 59,  213 => 51,  207 => 49,  201 => 47,  199 => 46,  193 => 43,  187 => 40,  176 => 31,  163 => 30,  133 => 9,  120 => 8,  97 => 5,  85 => 67,  83 => 63,  79 => 61,  77 => 59,  73 => 57,  71 => 30,  68 => 29,  66 => 8,  60 => 5,  54 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">
-        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">
-        {% block stylesheets %}
-            <style>
-                body {
-                    background: url(\"https://placehold.co/100x100/FFFFFF/EFEFEF/png?text=50965\");
-                }
+<head>
+    <meta charset=\"UTF-8\">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">
+    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">
+    {% block stylesheets %}
+        <style>
+            body {
+                background: url(\"https://placehold.co/100x100/FFFFFF/EFEFEF/png?text=50965\");
+            }
 
-                label {
-                    display: block;
-                }
+            label {
+                display: block;
+            }
 
-                input,select {
-                    width: 100%;
-                    height: 35px;
-                    border-style: solid;
-                    border-color: #b1b1b1;
-                    border-width: 2px;
-                    border-radius: 6px;
-                }
-            </style>
+            input,select {
+                width: 100%;
+                height: 35px;
+                border-style: solid;
+                border-color: #b1b1b1;
+                border-width: 2px;
+                border-radius: 6px;
+            }
+        </style>
 
-        {% endblock %}
-    </head>
-    {% block container %}
-        <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
-            <div class=\"container-fluid\" >
-                <a class=\"navbar-brand\" href=\"#\">W App</a>
-                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                    <span class=\"navbar-toggler-icon\"></span>
-                </button>
-                <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
-                    <ul class=\"navbar-nav\">
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href={{path('app_location_index')}}>Weather</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href={{path('app_forecast_index')}}>Measurements</a>
-                        </li>
-                    </ul>
-                </div>
+    {% endblock %}
+</head>
+{% block container %}
+    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        <div class=\"container-fluid\" >
+            <a class=\"navbar-brand\" href=\"#\">W App</a>
+            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+            </button>
+            <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                <ul class=\"navbar-nav\">
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href={{path('app_location_index')}}>Weather</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href={{path('app_forecast_index')}}>Measurements</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        {% if is_granted('ROLE_USER') %}
+                            <a class=\"nav-link\" href={{path('app_logout')}}>Logout</a>
+                        {% else %}
+                            <a class=\"nav-link\" href={{path('app_login')}}>Login</a>
+                        {% endif %}
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
+{% endblock %}
+<body>
+<div class=\"container-fluid mx-auto\" style=\"width: 100vw;\">
+    {% block body %}
     {% endblock %}
-    <div class=\"container-fluid mx-auto\" style=\"width: 100vw;\">
-        {% block body %}
-        {% endblock %}
-    </div>
-    {% block javascripts %}
-        {% block importmap %}{{ importmap('app') }}{% endblock %}
-        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz\" crossorigin=\"anonymous\"></script>
-    {% endblock %}
+</div>
+</body>
+{% block javascripts %}
+    {% block importmap %}{{ importmap('app') }}{% endblock %}
+    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz\" crossorigin=\"anonymous\"></script>
+{% endblock %}
 </html>
 ", "base.html.twig", "C:\\Users\\Adi\\PhpstormProjects\\AI2-lab\\ai2-pogodynka2024\\templates\\base.html.twig");
     }

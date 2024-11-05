@@ -566,3 +566,17 @@ a6f4c6,::1,GET,http://pogodynka.localhost:50965/,1729640270,,404,request
 d08a6b,::1,GET,http://pogodynka.localhost:50965/forecast,1729640286,,200,request
 ba7bb4,::1,GET,http://pogodynka.localhost:50965/forecast/4/edit,1729640291,,200,request
 a37255,::1,POST,http://pogodynka.localhost:50965/forecast/4/edit,1729640310,,422,request
+84686b,::1,GET,http://localhost:50965/,1730843461,,404,request
+1890f2,::1,GET,http://localhost:50965/location,1730843465,,302,request
+db80df,::1,GET,http://localhost:50965/login,1730843465,,200,request
+9c5220,::1,POST,http://localhost:50965/login,1730843477,,302,request
+787834,::1,GET,http://localhost:50965/location,1730843477,0fa823,500,request
+0fa823,::1,GET,http://localhost:50965/location,1730843477,,500,request
+a3ed91,::1,GET,http://localhost:50965/location,1730843561,,200,request
+14e973,::1,GET,http://localhost:50965/location,1730843643,,200,request
+947866,::1,GET,http://localhost:50965/logout,1730843646,,302,request
+fca6e7,::1,GET,http://localhost:50965/,1730843646,,404,request
+e80209,::1,GET,http://localhost:50965/login,1730843650,,200,request
+9ad47b,::1,POST,http://localhost:50965/login,1730843658,,302,request
+11e0b1,::1,GET,http://localhost:50965/,1730843658,,404,request
+94d4d0,::1,GET,http://localhost:50965/location,1730843666,,200,request
