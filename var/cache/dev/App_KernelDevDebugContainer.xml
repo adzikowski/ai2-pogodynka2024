@@ -228,11 +228,12 @@
         <parameter>ROLE_LOCATION_NEW</parameter>
         <parameter>ROLE_LOCATION_EDIT</parameter>
         <parameter>ROLE_LOCATION_DELETE</parameter>
+        <parameter>ROLE_FORECAST_SHOW</parameter>
+        <parameter>ROLE_LOCATION_SHOW</parameter>
       </parameter>
       <parameter key="ROLE_FORECASTER" type="collection">
         <parameter>ROLE_LOCATION_INDEX</parameter>
         <parameter>ROLE_FORECAST_INDEX</parameter>
-        <parameter>ROLE_FORECAST_SHOW</parameter>
       </parameter>
     </parameter>
     <parameter key="security.access.denied_url">null</parameter>

@@ -28,7 +28,7 @@ class ForecastRepository extends ServiceEntityRepository
         $result = $query->getResult();
         return $result;
     }
-    public function findByLocationAndCountry(string $location, $country){
+    public function findByLocationAndCountry($location, $country){
         $qb = $this->createQueryBuilder('m');
         $qb->where('m.location = :location')
             ->setParameter('location', $location)
