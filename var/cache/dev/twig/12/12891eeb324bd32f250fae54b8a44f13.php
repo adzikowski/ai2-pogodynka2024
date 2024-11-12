@@ -60,7 +60,7 @@ class __TwigTemplate_978ec03f068663f085d58f354770804f extends Template
 
     }
 
-    // line 3
+    // line 2
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -83,7 +83,7 @@ class __TwigTemplate_978ec03f068663f085d58f354770804f extends Template
         yield from [];
     }
 
-    // line 5
+    // line 3
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -96,60 +96,65 @@ class __TwigTemplate_978ec03f068663f085d58f354770804f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 4
         yield "    <h1>Measurements index</h1>
-
     <table class=\"table\">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>TimeOfOccurrence</th>
-                <th>TemperatureC</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>TimeOfOccurrence</th>
+            <th>TemperatureC</th>
+            <th>Description</th>
+            <th>actions</th>
+        </tr>
         </thead>
         <tbody>
         ";
-        // line 19
+        // line 16
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["forecasts"]) || array_key_exists("forecasts", $context) ? $context["forecasts"] : (function () { throw new RuntimeError('Variable "forecasts" does not exist.', 19, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["forecasts"]) || array_key_exists("forecasts", $context) ? $context["forecasts"] : (function () { throw new RuntimeError('Variable "forecasts" does not exist.', 16, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["forecast"]) {
-            // line 20
+            // line 17
             yield "            <tr>
                 <td>";
+            // line 18
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "id", [], "any", false, false, false, 18), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 19
+            ((CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "timeOfOccurrence", [], "any", false, false, false, 19)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "timeOfOccurrence", [], "any", false, false, false, 19), "Y-m-d"), "html", null, true)) : (yield ""));
+            yield "</td>
+                <td>";
+            // line 20
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "temperatureC", [], "any", false, false, false, 20), "html", null, true);
+            yield "</td>
+                <td>";
             // line 21
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "id", [], "any", false, false, false, 21), "html", null, true);
-            yield "</td>
-                <td>";
-            // line 22
-            ((CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "timeOfOccurrence", [], "any", false, false, false, 22)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "timeOfOccurrence", [], "any", false, false, false, 22), "Y-m-d"), "html", null, true)) : (yield ""));
-            yield "</td>
-                <td>";
-            // line 23
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "temperatureC", [], "any", false, false, false, 23), "html", null, true);
-            yield "</td>
-                <td>";
-            // line 24
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "description", [], "any", false, false, false, 24), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "description", [], "any", false, false, false, 21), "html", null, true);
             yield "</td>
                 <td>
                     <a href=\"";
-            // line 26
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forecast_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "id", [], "any", false, false, false, 26)]), "html", null, true);
+            // line 23
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forecast_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "id", [], "any", false, false, false, 23)]), "html", null, true);
             yield "\">show</a>
-                    <a href=\"";
+                    ";
+            // line 24
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_FORECAST_EDIT")) {
+                // line 25
+                yield "                        <a href=\"";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forecast_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "id", [], "any", false, false, false, 25)]), "html", null, true);
+                yield "\">edit</a>
+                    ";
+            }
             // line 27
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forecast_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["forecast"], "id", [], "any", false, false, false, 27)]), "html", null, true);
-            yield "\">edit</a>
-                </td>
+            yield "                </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 31
+            // line 30
             yield "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
@@ -158,15 +163,18 @@ class __TwigTemplate_978ec03f068663f085d58f354770804f extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['forecast'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 34
         yield "        </tbody>
     </table>
-
-    <a href=\"";
-        // line 38
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forecast_new");
-        yield "\">Create new</a>
-";
+    ";
+        // line 36
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_FORECAST_NEW")) {
+            // line 37
+            yield "        <a href=\"";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forecast_new");
+            yield "\">Create new</a>
+    ";
+        }
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -197,27 +205,24 @@ class __TwigTemplate_978ec03f068663f085d58f354770804f extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  167 => 38,  162 => 35,  153 => 31,  144 => 27,  140 => 26,  135 => 24,  131 => 23,  127 => 22,  123 => 21,  120 => 20,  115 => 19,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  173 => 37,  171 => 36,  167 => 34,  158 => 30,  151 => 27,  145 => 25,  143 => 24,  139 => 23,  134 => 21,  130 => 20,  126 => 19,  122 => 18,  119 => 17,  114 => 16,  100 => 4,  87 => 3,  64 => 2,  41 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{% extends 'base.html.twig' %}
-
 {% block title %}Measurements index{% endblock %}
-
 {% block body %}
     <h1>Measurements index</h1>
-
     <table class=\"table\">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>TimeOfOccurrence</th>
-                <th>TemperatureC</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>TimeOfOccurrence</th>
+            <th>TemperatureC</th>
+            <th>Description</th>
+            <th>actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for forecast in forecasts %}
@@ -228,7 +233,9 @@ class __TwigTemplate_978ec03f068663f085d58f354770804f extends Template
                 <td>{{ forecast.description }}</td>
                 <td>
                     <a href=\"{{ path('app_forecast_show', {'id': forecast.id}) }}\">show</a>
-                    <a href=\"{{ path('app_forecast_edit', {'id': forecast.id}) }}\">edit</a>
+                    {% if is_granted('ROLE_FORECAST_EDIT') %}
+                        <a href=\"{{ path('app_forecast_edit', {'id': forecast.id}) }}\">edit</a>
+                    {% endif %}
                 </td>
             </tr>
         {% else %}
@@ -238,8 +245,9 @@ class __TwigTemplate_978ec03f068663f085d58f354770804f extends Template
         {% endfor %}
         </tbody>
     </table>
-
-    <a href=\"{{ path('app_forecast_new') }}\">Create new</a>
+    {% if is_granted('ROLE_FORECAST_NEW') %}
+        <a href=\"{{ path('app_forecast_new') }}\">Create new</a>
+    {% endif %}
 {% endblock %}
 ", "forecast/index.html.twig", "C:\\Users\\Adi\\PhpstormProjects\\AI2-lab\\ai2-pogodynka2024\\templates\\forecast\\index.html.twig");
     }
