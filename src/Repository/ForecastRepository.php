@@ -28,12 +28,12 @@ class ForecastRepository extends ServiceEntityRepository
         $result = $query->getResult();
         return $result;
     }
-    public function findByLocationAndCountry($location, $country){
+    public function findByLocationAndCountry(Location $location,string $country){
         $qb = $this->createQueryBuilder('m');
         $qb->where('m.location = :location')
             ->setParameter('location', $location)
             ->andWhere('m.timeOfOccurrence > :now')
-            ->setParameter('now', date('d-m-Y'))
+//            ->setParameter('now', date('d-m-Y'))
             ->leftJoin('m.location', 'l')
             ->andWhere('l.country = :country')
             ->setParameter('country', $country);

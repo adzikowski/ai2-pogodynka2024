@@ -2,7 +2,6 @@
 declare(strict_types=1);
 
 namespace App\Service;
-
 use App\Entity\Location;
 use App\Entity\Forecast;
 use App\Repository\ForecastRepository;
@@ -15,17 +14,28 @@ class WeatherUtil
     {
         $this->forecastRepository = $forecastRepository;
     }
+
+    /**
+     * @return Forecast[]
+     */
     public function getWeatherForLocation(Location $location): array
     {
         return $this->forecastRepository->findByLocation($location);
     }
 
-    public function getWeatherForCountryAndCity(string $city, string $country ): array
+    /**
+     * @return Forecast[]
+     */
+    public function getWeatherForCountryAndCity(string $countryCode, string $city): array
     {
-        $locationEntity = $this->forecastRepository->findOneBy([
-            'city' => $city,
-            'country' => $country,
-        ]);
-        return $this->getWeatherForLocation($locationEntity);
+        $location = $this->forecastRepository
+            ->getEntityManager()
+            ->getRepository(Location::class)
+            ->findOneBy([
+                'city' => $city,
+                'country' => $countryCode,
+            ]);
+
+        return $location ? $this->forecastRepository->findByLocation($location) : [];
     }
 }
