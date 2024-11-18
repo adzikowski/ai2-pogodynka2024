@@ -1,0 +1,12 @@
+{
+    "city": "{{ city }}",
+    "country": "{{ country }}",
+    "measurements": [
+        {% for measurement in measurements %}
+        {
+            "date": "{{ measurement.timeOfOccurrence|date('Y-m-d') }}",
+            "celsius": "{{ measurement.temperatureC }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}

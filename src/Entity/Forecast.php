@@ -67,6 +67,11 @@ class Forecast
 
         return $this;
     }
+    public function getFahrenheit(): ?string
+    {
+        return round($this->temperatureC * 9/5,3) + 32;
+    }
+
 
     public function getDescription(): ?string
     {
