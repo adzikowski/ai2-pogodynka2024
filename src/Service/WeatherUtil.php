@@ -36,6 +36,6 @@ class WeatherUtil
                 'country' => $countryCode,
             ]);
 
-        return $location ? $this->forecastRepository->findByLocation($location) : [];
+        return $location ? $this->getWeatherForLocation($location) : [];
     }
 }
