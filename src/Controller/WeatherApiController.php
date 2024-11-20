@@ -17,12 +17,11 @@ class WeatherApiController extends AbstractController
         #[MapQueryParameter] string       $city,
         #[MapQueryParameter] string       $country,
         #[MapQueryParameter] string       $format,
-        #[MapQueryParameter('twig')] bool $twig = false,
         WeatherUtil                       $util,
+        #[MapQueryParameter('twig')] bool $twig = false,
     ): JsonResponse|response
     {
         $measurements = $util->getWeatherForCountryAndCity($country, $city);
-
         if ($format === 'json') {
             if ($twig) {
                 return $this->render('weather_api/index.json.twig', [

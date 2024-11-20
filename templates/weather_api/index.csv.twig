@@ -2,6 +2,7 @@ city,country,date,celsius
 {% for measurement in measurements %}
 {{- city }},
 {{- country }},
-{{measurement.timeOfOccurrence|date('Y-m-d') }},
+{{- measurement.timeOfOccurrence|date('Y-m-d') }},
 {{- measurement.temperatureC }}
 {% endfor %}
+
